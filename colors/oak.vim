@@ -91,6 +91,7 @@ call s:hi('LineNr',       s:trunk3, 'NONE',   '')
 call s:hi('SignColumn',   s:trunk2, s:trunk1, '')
 call s:hi('StatusLine',   s:trunk2, s:trunk5, '')
 call s:hi('StatusLineNC', s:trunk2, s:trunk4, '')
+call s:hi('Folded',       s:trunk5, s:trunk2, '')
 
 call s:hi('VertSplit',    s:trunk3, s:trunk2, '')
 
