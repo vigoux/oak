@@ -186,7 +186,7 @@ call s:hi('vimHiGroup',    s:leaf3, '', 'italic')
 call s:hi('vimIsCommand',  s:leaf2, '', '')
 call s:hi('vimSynMtchOpt', s:leaf3, '', '')
 call s:hi('vimSynType',    s:fur1, '', '')
-call s:hi('vimFuncName',   s:leaf2, '', '')
+call s:hi('vimFuncName',   s:fur3, '', '')
 call s:hi('vimVar',        s:trunk5, '', '')
 hi! link vimCommentString Comment
 hi! link vimFunc          Function
