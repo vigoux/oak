@@ -20,7 +20,7 @@ let s:fur2    = '#A58A86'
 let s:fur3    = '#DA7149'
 let s:fur4    = '#D69060'
 let s:leaf1   = '#AB7ACC'
-let s:leaf2   = '#29A3A3'
+let s:leaf2   = '#21969E'
 let s:leaf3   = '#359764'
 let s:petal1  = '#FF4D4D'
 let s:petal2  = '#F0C54C'
@@ -132,14 +132,14 @@ call s:hi('Boolean',        s:petal2,  '',        'bold')
 call s:hi('Character',      s:fur2, '',        '')
 call s:hi('Comment',        s:fur1,  '',        'italic')
 call s:hi('Conditional',    s:leaf1,  '',        '')
-call s:hi('Constant',       s:petal2,   '',        'bold')
+call s:hi('Constant',       s:petal2,   '',        '')
 call s:hi('Define',         s:leaf1,  '',        '')
 call s:hi('Delimiter',      s:trunk7,   '',        '')
 call s:hi('Error',          s:petal1, s:trunk1,  '')
 call s:hi('Exception',      s:leaf3,  '',        '')
 call s:hi('Float',          s:petal2, '',        '')
 call s:hi('Function',       s:fur3,  '',        '')
-call s:hi('Identifier',     s:trunk6,   '',        '')
+call s:hi('Identifier',     s:fur2,   '',        '')
 call s:hi('Include',        s:leaf1,  '',        '')
 call s:hi('Keyword',        s:leaf1,  '',        '')
 call s:hi('Label',          s:leaf1,  '',        '')
@@ -181,8 +181,8 @@ hi! link helpStar     Special
 
 call s:hi('vimCmdSep',     s:fur4, '', '')
 call s:hi('vimCommand',    s:leaf3, '', '')
-call s:hi('vimGroup',      s:leaf3, '', '')
-call s:hi('vimHiGroup',    s:leaf3, '', '')
+call s:hi('vimGroup',      s:leaf1, '', 'italic')
+call s:hi('vimHiGroup',    s:leaf1, '', 'italic')
 call s:hi('vimIsCommand',  s:leaf2, '', '')
 call s:hi('vimSynMtchOpt', s:leaf3, '', '')
 call s:hi('vimSynType',    s:fur1, '', '')
