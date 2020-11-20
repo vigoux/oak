@@ -6,7 +6,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = 'nordberg'
+let g:colors_name = 'oak'
 
 let s:trunk1  = '#0E0701'
 let s:trunk2  = '#25170A'
