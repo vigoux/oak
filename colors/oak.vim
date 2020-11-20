@@ -10,11 +10,9 @@ let g:colors_name = 'nordberg'
 
 let s:trunk1  = '#0E0701'
 let s:trunk2  = '#25170A'
-let s:trunk3  = '#3C2612'
-let s:trunk4  = '#593C22'
-let s:trunk5  = '#815731'
-let s:trunk6  = '#AC9682'
-let s:trunk7  = '#FEEFE1'
+let s:trunk3  = '#593C22'
+let s:trunk4  = '#AC9682'
+let s:trunk5  = '#FEEFE1'
 let s:fur1    = '#7A5454'
 let s:fur2    = '#A58A86'
 let s:fur3    = '#DA7149'
@@ -25,22 +23,23 @@ let s:leaf3   = '#359764'
 let s:petal1  = '#FF4D4D'
 let s:petal2  = '#F0C54C'
 
-let g:terminal_color_0  = s:trunk2
+let g:terminal_color_0  = s:trunk1
 let g:terminal_color_1  = s:petal1
 let g:terminal_color_2  = s:fur2
 let g:terminal_color_3  = s:petal2
 let g:terminal_color_4  = s:leaf3
 let g:terminal_color_5  = s:leaf1
 let g:terminal_color_6  = s:fur1
-let g:terminal_color_7  = s:trunk6
-let g:terminal_color_8  = s:trunk4
+let g:terminal_color_7  = s:trunk4
+
+let g:terminal_color_8  = s:trunk2
 let g:terminal_color_9  = s:petal1
 let g:terminal_color_10 = s:fur2
 let g:terminal_color_11 = s:petal2
 let g:terminal_color_12 = s:leaf3
 let g:terminal_color_13 = s:leaf1
 let g:terminal_color_14 = s:leaf2
-let g:terminal_color_15 = s:trunk7
+let g:terminal_color_15 = s:trunk5
 
 function! s:hi(group, guifg, guibg, attr)
   let l:cmd = 'hi ' . a:group
@@ -56,17 +55,17 @@ function! s:hi(group, guifg, guibg, attr)
   execute l:cmd
 endfunction
 
-call s:hi('Bold',       s:trunk5,  '',     'bold')
-call s:hi('Italic',     s:trunk5,  '',     'italic')
+call s:hi('Bold',       s:trunk4,  '',     'bold')
+call s:hi('Italic',     s:trunk4,  '',     'italic')
 call s:hi('Underlined', s:fur4, '',     'underline')
 
 " nvim
-call s:hi('Normal',     s:trunk7,  s:trunk1,  '')
+call s:hi('Normal',     s:trunk5,  s:trunk1,  '')
 call s:hi('Visual',     '',       s:trunk2,  '')
 call s:hi('VisualNOS',  '',       s:trunk2,  '')
 call s:hi('Search',     s:trunk2, s:fur3, '')
-call s:hi('IncSearch',  s:trunk2, s:trunk6,   'NONE')
-call s:hi('MatchParen', s:trunk7,  s:trunk4,  '')
+call s:hi('IncSearch',  s:trunk2, s:trunk4,   'NONE')
+call s:hi('MatchParen', s:trunk5,  s:trunk3,  '')
 
 call s:hi('NonText',     s:trunk3, '', '')
 call s:hi('EndOfBuffer', s:trunk1, '', '')
@@ -77,34 +76,34 @@ call s:hi('Directory',    s:fur1,  '',       '')
 call s:hi('SpecialKey',   s:fur4,  '',       '')
 call s:hi('ErrorMsg',     s:petal1, s:trunk1, '')
 call s:hi('WarningMsg',   s:fur3, s:trunk1, '')
-call s:hi('ModeMsg',      s:trunk5,   s:trunk1, '')
+call s:hi('ModeMsg',      s:trunk4,   s:trunk1, '')
 call s:hi('MoreMsg',      s:fur1,  s:trunk1, '')
 call s:hi('MsgSeparator', '',        s:trunk2, '')
 
-call s:hi('Cursor',       s:trunk1, s:trunk5,  '')
-call s:hi('iCursor',      s:trunk1, s:trunk5,  '')
+call s:hi('Cursor',       s:trunk1, s:trunk4,  '')
+call s:hi('iCursor',      s:trunk1, s:trunk4,  '')
 call s:hi('TermCursorNC', '',       s:trunk2, '')
 call s:hi('CursorColumn', '',       s:trunk2, '')
 call s:hi('CursorLine',   '',       s:trunk2, '')
-call s:hi('CursorLineNr', s:trunk5,  s:trunk2, '')
+call s:hi('CursorLineNr', s:trunk4,  s:trunk2, '')
 call s:hi('ColorColumn',  '',       s:trunk2, '')
-call s:hi('LineNr',       s:trunk4, 'NONE',   '')
+call s:hi('LineNr',       s:trunk3, 'NONE',   '')
 call s:hi('SignColumn',   s:trunk2, s:trunk1, '')
-call s:hi('StatusLine',   s:trunk2, s:trunk7, '')
-call s:hi('StatusLineNC', s:trunk2, s:trunk5, '')
+call s:hi('StatusLine',   s:trunk2, s:trunk5, '')
+call s:hi('StatusLineNC', s:trunk2, s:trunk4, '')
 
 call s:hi('VertSplit',    s:trunk3, s:trunk2, '')
 
-call s:hi('Pmenu',      s:trunk6, s:trunk2, '')
-call s:hi('PmenuSel',   s:trunk7, s:trunk4, '')
-call s:hi('PmenuSbar',  'NONE',  s:trunk4, '')
+call s:hi('Pmenu',      s:trunk4, s:trunk2, '')
+call s:hi('PmenuSel',   s:trunk5, s:trunk3, '')
+call s:hi('PmenuSbar',  'NONE',  s:trunk3, '')
 call s:hi('PmenuThumb', 'NONE',  s:trunk2, '')
 hi! link Wildmenu Pmenu
 
 call s:hi('SpellBad',   s:petal1, s:trunk1, 'undercurl')
 call s:hi('SpellCap',   s:petal2, s:trunk1, 'undercurl')
-call s:hi('SpellLocal', s:trunk6,   s:trunk1, 'undercurl')
-call s:hi('SpellRare',  s:trunk7,   s:trunk1, 'undercurl')
+call s:hi('SpellLocal', s:trunk4,   s:trunk1, 'undercurl')
+call s:hi('SpellRare',  s:trunk5,   s:trunk1, 'undercurl')
 
 call s:hi('healthError',   s:petal1, s:trunk1, '')
 call s:hi('healthSuccess', s:fur2, s:trunk1, '')
@@ -122,8 +121,8 @@ call s:hi('gitcommitSelectedFile',  s:fur2, '', '')
 
 call s:hi('LspDiagnosticsDefaultError',       s:petal1, '', '')
 call s:hi('LspDiagnosticsDefaultWarning',     s:fur3, '', '')
-call s:hi('LspDiagnosticsDefaultInformation', s:trunk4,  '', 'italic')
-call s:hi('LspDiagnosticsDefaultHint',        s:trunk4,  '', 'italic')
+call s:hi('LspDiagnosticsDefaultInformation', s:trunk3,  '', 'italic')
+call s:hi('LspDiagnosticsDefaultHint',        s:trunk3,  '', 'italic')
 
 call s:hi('TelescopeMatching', s:fur3, '', 'bold')
 
@@ -134,7 +133,7 @@ call s:hi('Comment',        s:fur1,  '',        'italic')
 call s:hi('Conditional',    s:leaf1,  '',        '')
 call s:hi('Constant',       s:petal2,   '',        '')
 call s:hi('Define',         s:leaf1,  '',        '')
-call s:hi('Delimiter',      s:trunk7,   '',        '')
+call s:hi('Delimiter',      s:trunk5,   '',        '')
 call s:hi('Error',          s:petal1, s:trunk1,  '')
 call s:hi('Exception',      s:leaf3,  '',        '')
 call s:hi('Float',          s:petal2, '',        '')
@@ -149,14 +148,14 @@ call s:hi('Operator',       s:leaf3,  '',        '')
 call s:hi('PreCondit',      s:leaf3,  '',        '')
 call s:hi('PreProc',        s:leaf1,  '',        '')
 call s:hi('Repeat',         s:leaf1,  '',        '')
-call s:hi('Special',        s:trunk5,   '',        '')
+call s:hi('Special',        s:trunk4,   '',        '')
 call s:hi('SpecialChar',    s:leaf3,  '',        '')
 call s:hi('SpecialComment', s:fur1,  '',        'italic')
 call s:hi('Statement',      s:leaf3,  '',        '')
 call s:hi('StorageClass',   s:leaf3,  '',        '')
 call s:hi('String',         s:leaf2, '',        '')
 call s:hi('Structure',      s:leaf3,  '',        '')
-call s:hi('Tag',            s:trunk5,   '',        '')
+call s:hi('Tag',            s:trunk4,   '',        '')
 call s:hi('Todo',           s:trunk2,  s:fur3, '')
 call s:hi('Type',           s:leaf3,  '',        'italic')
 call s:hi('Typedef',        s:leaf3,  '',        '')
@@ -180,14 +179,14 @@ hi! link helpBar      Special
 hi! link helpStar     Special
 
 call s:hi('vimCmdSep',     s:fur4, '', '')
-call s:hi('vimCommand',    s:leaf3, '', '')
-call s:hi('vimGroup',      s:leaf1, '', 'italic')
-call s:hi('vimHiGroup',    s:leaf1, '', 'italic')
+call s:hi('vimCommand',    s:leaf1, '', '')
+call s:hi('vimGroup',      s:leaf3, '', 'italic')
+call s:hi('vimHiGroup',    s:leaf3, '', 'italic')
 call s:hi('vimIsCommand',  s:leaf2, '', '')
 call s:hi('vimSynMtchOpt', s:leaf3, '', '')
 call s:hi('vimSynType',    s:fur1, '', '')
 call s:hi('vimFuncName',   s:leaf2, '', '')
-call s:hi('vimVar',        s:trunk7, '', '')
+call s:hi('vimVar',        s:trunk5, '', '')
 hi! link vimCommentString Comment
 hi! link vimFunc          Function
 hi! link vimUserFunc      Function
@@ -254,7 +253,7 @@ call s:hi('texCmdTitle',     s:fur3, '', '')
 call s:hi('texCmdAuthor',    s:fur3, '', '')
 call s:hi('texTitleArg',     s:petal2, '', 'bold')
 call s:hi('texAuthorArg',    s:petal2, '', 'italic')
-call s:hi('texFootnoteArg',  s:trunk5,   '', 'italic')
+call s:hi('texFootnoteArg',  s:trunk4,   '', 'italic')
 
 " environments
 call s:hi('texCmdEnv',     s:leaf3,  '', '')
