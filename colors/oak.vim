@@ -65,7 +65,7 @@ call s:hi('Visual',     '',       s:trunk2,  '')
 call s:hi('VisualNOS',  '',       s:trunk2,  '')
 call s:hi('Search',     s:trunk2, s:fur3, '')
 call s:hi('IncSearch',  s:trunk2, s:trunk4,   'NONE')
-call s:hi('MatchParen', s:trunk5,  s:trunk3,  '')
+call s:hi('MatchParen', s:trunk5,  s:trunk2,  '')
 
 call s:hi('NonText',     s:trunk3, '', '')
 call s:hi('EndOfBuffer', s:trunk1, '', '')
