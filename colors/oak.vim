@@ -195,6 +195,10 @@ hi! link vimFunc          Function
 hi! link vimFuncName      Function
 hi! link vimUserFunc      Function
 
+" Tree-sitter internals and uses
+call s:hi("nodeType", s:trunk5)
+call s:hi("nodeTag", s:fur1)
+
 " Behind this line is left untuched from @clason code
 " I don't use stock highlighting, prefering tree-sitter (for good reason...)
 " so I don't think I'll ever touch those
