@@ -1,6 +1,6 @@
 # `oak`, a calming vim colorscheme
 
-![Screenshot](https://i.imgur.com/SYhRxww.png)
+![Screenshot](https://i.imgur.com/iylXuX2.png)
 
 Hey there, this is `oak` a brown-ish, high-contrast-ish colorscheme I made for myself.
 
