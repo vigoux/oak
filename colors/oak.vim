@@ -8,8 +8,6 @@ endif
 
 let g:colors_name = 'oak'
 
-let s:trunk5_alt = '#D5C3B2'
-
 let s:trunk1  = '#0E0701'
 let s:trunk2  = '#25170A'
 let s:trunk3  = '#593C22'
@@ -67,9 +65,10 @@ call s:hi('Visual',     '',       s:trunk2,  '')
 call s:hi('VisualNOS',  '',       s:trunk2,  '')
 call s:hi('Search',     s:trunk2, s:fur3, '')
 call s:hi('IncSearch',  s:trunk2, s:trunk4,   'NONE')
-call s:hi('MatchParen', 'NONE',  s:fur1,  '')
 
-call s:hi('NonText',     s:trunk3, '', '')
+call s:hi('MatchParen', 'NONE',  s:fur1,  '')
+call s:hi('Whitespace',  s:trunk2, '', '')
+call s:hi('NonText',     s:trunk2, '', '')
 call s:hi('EndOfBuffer', s:trunk3, '', '')
 
 call s:hi('Question',     s:fur2, '',       '')
