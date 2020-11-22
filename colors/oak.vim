@@ -1,4 +1,4 @@
-" Last Change: 2020 Nov 20
+" Last Change: 2020 Nov 22
 set background=dark
 
 hi clear
@@ -7,6 +7,8 @@ if exists('syntax_on')
 endif
 
 let g:colors_name = 'oak'
+
+let s:trunk5_alt = '#D5C3B2'
 
 let s:trunk1  = '#0E0701'
 let s:trunk2  = '#25170A'
@@ -68,7 +70,7 @@ call s:hi('IncSearch',  s:trunk2, s:trunk4,   'NONE')
 call s:hi('MatchParen', 'NONE',  s:fur1,  '')
 
 call s:hi('NonText',     s:trunk3, '', '')
-call s:hi('EndOfBuffer', s:trunk1, '', '')
+call s:hi('EndOfBuffer', s:trunk3, '', '')
 
 call s:hi('Question',     s:fur2, '',       '')
 call s:hi('Title',        s:fur3, '',       '')
@@ -101,10 +103,10 @@ call s:hi('PmenuSbar',  'NONE',  s:trunk3, '')
 call s:hi('PmenuThumb', 'NONE',  s:trunk2, '')
 hi! link Wildmenu Pmenu
 
-call s:hi('SpellBad',   s:petal1, s:trunk1, 'undercurl')
-call s:hi('SpellCap',   s:petal2, s:trunk1, 'undercurl')
-call s:hi('SpellLocal', s:trunk4,   s:trunk1, 'undercurl')
-call s:hi('SpellRare',  s:trunk5,   s:trunk1, 'undercurl')
+call s:hi('SpellBad',   s:petal1, '', 'undercurl')
+call s:hi('SpellCap',   s:leaf2, '', 'undercurl')
+call s:hi('SpellLocal', s:trunk4,   '', 'undercurl')
+call s:hi('SpellRare',  s:trunk5,   '', 'undercurl')
 
 call s:hi('healthError',   s:petal1, s:trunk1, '')
 call s:hi('healthSuccess', s:fur2, s:trunk1, '')
@@ -120,12 +122,12 @@ call s:hi('gitcommitDiscardedFile', s:petal1, '', '')
 call s:hi('gitcommitUntrackedFile', s:petal1, '', '')
 call s:hi('gitcommitSelectedFile',  s:fur2, '', '')
 
-call s:hi('LspDiagnosticsDefaultError',       s:petal1, '', '')
-call s:hi('LspDiagnosticsDefaultWarning',     s:fur3, '', '')
-call s:hi('LspDiagnosticsDefaultInformation', s:trunk3,  '', 'italic')
-call s:hi('LspDiagnosticsDefaultHint',        s:trunk3,  '', 'italic')
+call s:hi('LspDiagnosticsDefaultError',       s:petal1, '', 'underline')
+call s:hi('LspDiagnosticsDefaultWarning',     s:petal2, '', 'underline')
+call s:hi('LspDiagnosticsDefaultInformation', s:leaf2,  '', 'underline')
+call s:hi('LspDiagnosticsDefaultHint',        s:fur4,  '', 'underline')
 
-call s:hi('TelescopeMatching', s:fur3, '', 'bold')
+call s:hi('TelescopeMatching', s:fur4, '', 'bold')
 
 " language builtin
 call s:hi('Boolean',        s:petal2,  '',        'bold')
@@ -161,10 +163,9 @@ call s:hi('Todo',           s:trunk2,  s:fur3, '')
 call s:hi('Type',           s:leaf3,  '',        'italic')
 call s:hi('Typedef',        s:leaf3,  '',        '')
 
-call s:hi('DiffAdd',    s:fur2, s:trunk2, '')
-call s:hi('DiffChange', s:petal2, s:trunk2, '')
-call s:hi('DiffDelete', s:petal1, s:trunk2, '')
-call s:hi('DiffText',   s:leaf3,  s:trunk2, '')
+call s:hi('DiffAdd',    s:leaf3, '', '')
+call s:hi('DiffChange', s:petal2, '', '')
+call s:hi('DiffDelete', s:petal1, '', '')
 
 call s:hi('helpCommand',        s:fur1,  '', '')
 call s:hi('helpExample',        s:fur4,  '', '')
@@ -186,10 +187,10 @@ call s:hi('vimHiGroup',    s:leaf3, '', 'italic')
 call s:hi('vimIsCommand',  s:leaf2, '', '')
 call s:hi('vimSynMtchOpt', s:leaf3, '', '')
 call s:hi('vimSynType',    s:fur1, '', '')
-call s:hi('vimFuncName',   s:fur3, '', '')
 call s:hi('vimVar',        s:trunk5, '', '')
 hi! link vimCommentString Comment
 hi! link vimFunc          Function
+hi! link vimFuncName      Function
 hi! link vimUserFunc      Function
 
 hi! link luaFunc  Function
