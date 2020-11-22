@@ -122,10 +122,10 @@ call s:hi('gitcommitDiscardedFile', s:petal1)
 call s:hi('gitcommitUntrackedFile', s:petal1)
 call s:hi('gitcommitSelectedFile',  s:leaf3)
 
-call s:hi('LspDiagnosticsDefaultError',       s:petal1, '', 'underline')
-call s:hi('LspDiagnosticsDefaultWarning',     s:petal2, '', 'underline')
-call s:hi('LspDiagnosticsDefaultInformation', s:leaf2,  '', 'underline')
-call s:hi('LspDiagnosticsDefaultHint',        s:fur4,  '', 'underline')
+call s:hi('LspDiagnosticsDefaultError',       s:petal1)
+call s:hi('LspDiagnosticsDefaultWarning',     s:petal2)
+call s:hi('LspDiagnosticsDefaultInformation', s:leaf2)
+call s:hi('LspDiagnosticsDefaultHint',        s:fur4)
 
 call s:hi('TelescopeMatching', s:fur4, '', 'bold')
 
