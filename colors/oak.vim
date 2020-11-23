@@ -1,4 +1,4 @@
-" Last Change: 2020 Nov 22
+" Last Change: 2020 Nov 23
 set background=dark
 
 hi clear
@@ -126,6 +126,10 @@ call s:hi('LspDiagnosticsDefaultError',       s:petal1)
 call s:hi('LspDiagnosticsDefaultWarning',     s:petal2)
 call s:hi('LspDiagnosticsDefaultInformation', s:leaf2)
 call s:hi('LspDiagnosticsDefaultHint',        s:fur4)
+call s:hi('LspDiagnosticsUnderlineError',       s:petal1, '', 'underline')
+call s:hi('LspDiagnosticsUnderlineWarning',     s:petal2, '', 'underline')
+call s:hi('LspDiagnosticsUnderlineInformation', s:leaf2, '', 'underline')
+call s:hi('LspDiagnosticsUnderlineHint',        s:fur4, '', 'underline')
 
 call s:hi('TelescopeMatching', s:fur4, '', 'bold')
 
