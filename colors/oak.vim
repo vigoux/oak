@@ -1,4 +1,4 @@
-" Last Change: 2020 Nov 23
+" Last Change: 2020 Nov 24
 set background=dark
 
 hi clear
@@ -41,12 +41,11 @@ let g:terminal_color_13 = s:leaf1
 let g:terminal_color_14 = s:leaf2
 let g:terminal_color_15 = s:trunk5
 
-" Shamelessly stolen from dracula/vim
 function! s:orNONE(str)
   return len(a:str) > 0 ? a:str : 'NONE'
 endfunction
 
-function! s:hi(group, fg, ...)
+function! s:hi(group, fg, ...) " bg, attrs
   let l:fg = s:orNONE(a:fg)
   let l:bg = s:orNONE(get(a:, 1, ''))
   let l:attrs = s:orNONE(get(a:, 2, ''))
@@ -72,7 +71,7 @@ call s:hi('VisualNOS',  '',       s:trunk2)
 call s:hi('Search',     s:trunk2, s:fur3)
 call s:hi('IncSearch',  s:trunk2, s:trunk4)
 
-call s:hi('MatchParen', '',  s:fur1)
+call s:hi('MatchParen', '',  s:trunk2)
 call s:hi('Whitespace',  s:trunk2)
 call s:hi('NonText',     s:trunk2)
 call s:hi('EndOfBuffer', s:trunk3)
@@ -96,9 +95,9 @@ call s:hi('CursorLineNr', s:trunk4,  s:trunk2)
 call s:hi('ColorColumn',  '',       s:trunk2)
 call s:hi('LineNr',       s:trunk3)
 call s:hi('SignColumn',   s:trunk2, s:trunk1)
-call s:hi('StatusLine',   s:trunk4, s:trunk2)
+call s:hi('StatusLine',   s:trunk4, s:trunk2, 'bold')"{{{
 call s:hi('StatusLineNC', s:trunk3, s:trunk2)
-call s:hi('Folded',       s:trunk5, s:trunk2)
+call s:hi('Folded',       s:trunk5, s:trunk2)"}}}
 
 call s:hi('VertSplit',    s:trunk3, s:trunk2)
 
@@ -202,6 +201,7 @@ hi! link vimUserFunc      Function
 " Tree-sitter internals and uses
 call s:hi("nodeType", s:trunk5)
 call s:hi("nodeTag", s:fur1)
+call s:hi('TSParameter', s:trunk5, '', 'italic')
 
 " Behind this line is left untuched from @clason code
 " I don't use stock highlighting, prefering tree-sitter (for good reason...)
