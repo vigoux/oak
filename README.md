@@ -6,6 +6,9 @@ Hey there, this is `oak` a brown-ish, high-contrast-ish colorscheme I made for m
 
 It is pretty early stage, and I might both not use it in the end, or drastically change it.
 
+#### LSP virtual text background
+Set `g:oak_virtualtext_bg` to `1` before loading the colorscheme to have a prominent background for warning and error messages
+
 # Inspiration and goals
 
 I was a heavy dracula user before making this theme, so the high-contrast feel of dracula was
