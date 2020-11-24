@@ -129,6 +129,12 @@ call s:hi('LspDiagnosticsUnderlineError',       s:petal1, '', 'underline')
 call s:hi('LspDiagnosticsUnderlineWarning',     s:petal2, '', 'underline')
 call s:hi('LspDiagnosticsUnderlineInformation', s:leaf2, '', 'underline')
 call s:hi('LspDiagnosticsUnderlineHint',        s:fur4, '', 'underline')
+if get(g:, "oak_virtualtext_bg", 0) == 1
+  call s:hi('LspDiagnosticsVirtualTextError',       s:petal1, s:trunk2)
+  call s:hi('LspDiagnosticsVirtualTextWarning',     s:petal2, s:trunk2)
+  call s:hi('LspDiagnosticsVirtualTextInformation', s:leaf2)
+  call s:hi('LspDiagnosticsVirtualTextHint',        s:fur4)
+endif
 
 call s:hi('TelescopeMatching', s:fur4, '', 'bold')
 
