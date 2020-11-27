@@ -1,4 +1,4 @@
-" Last Change: 2020 Nov 24
+" Last Change: 2020 Nov 27
 set background=dark
 
 hi clear
@@ -136,7 +136,12 @@ if get(g:, "oak_virtualtext_bg", 0) == 1
   call s:hi('LspDiagnosticsVirtualTextHint',        s:fur4)
 endif
 
-call s:hi('TelescopeMatching', s:fur4, '', 'bold')
+" Floating windows
+call s:hi('NormalFloat', s:trunk5, s:trunk2)
+
+" Telescope
+call s:hi('TelescopeSelection', s:trunk5, s:trunk3, 'bold')
+call s:hi('TelescopeMatching', s:leaf2)
 
 " language builtin
 call s:hi('Boolean',        s:petal2,  '',        'bold')
