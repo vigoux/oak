@@ -145,8 +145,11 @@ call s:hi('NormalFloat', s:trunk5, s:trunk2)
 
 " Telescope
 call s:hi('TelescopeNormal', s:trunk5, s:trunk1)
-call s:hi('TelescopeSelection', s:trunk5, s:trunk3, 'bold')
-call s:hi('TelescopeMatching', s:leaf2)
+call s:hi('TelescopeSelection', s:leaf3, '', 'bold')
+call s:hi('TelescopeMatching', s:petal1)
+call s:hi('TelescopeSelectionCaret', s:fur2)
+call s:hi('TelescopePromptPrefix', s:fur2)
+call s:hi('TelescopeBorder', s:trunk4)
 
 " language builtin
 call s:hi('Boolean',        s:petal2,  '',        'bold')
