@@ -144,6 +144,7 @@ endif
 call s:hi('NormalFloat', s:trunk5, s:trunk2)
 
 " Telescope
+call s:hi('TelescopeNormal', s:trunk5, s:trunk1)
 call s:hi('TelescopeSelection', s:trunk5, s:trunk3, 'bold')
 call s:hi('TelescopeMatching', s:leaf2)
 
