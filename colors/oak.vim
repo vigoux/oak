@@ -1,4 +1,4 @@
-" Last Change: 2020 Nov 27
+" Last Change: 2020 Nov 30
 set background=dark
 
 hi clear
@@ -106,6 +106,10 @@ call s:hi('PmenuSel',   s:trunk5, s:trunk3)
 call s:hi('PmenuSbar',  '',  s:trunk3)
 call s:hi('PmenuThumb', '',  s:trunk2)
 hi! link Wildmenu Pmenu
+
+call s:hi('TabLineSel', s:trunk5)
+call s:hi('TabLine', s:trunk5, s:trunk2)
+call s:hi('TabLineFill', s:trunk5, s:trunk2)
 
 call s:hi('SpellBad',   s:petal1, '', 'undercurl')
 call s:hi('SpellCap',   s:leaf2, '', 'undercurl')
