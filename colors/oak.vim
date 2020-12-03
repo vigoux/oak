@@ -1,4 +1,4 @@
-" Last Change: 2020 Nov 30
+" Last Change: 2020 Dec 03
 set background=dark
 
 hi clear
@@ -88,6 +88,7 @@ call s:hi('MsgSeparator', '',        s:trunk2)
 
 call s:hi('Cursor',       s:trunk1, s:trunk4)
 call s:hi('iCursor',      s:trunk1, s:trunk4)
+call s:hi('Conceal',      s:trunk3)
 call s:hi('TermCursorNC', '',       s:trunk2)
 call s:hi('CursorColumn', '',       s:trunk2)
 call s:hi('CursorLine',   '',       s:trunk2)
