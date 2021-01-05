@@ -1,4 +1,4 @@
-" Last Change: 2020 Dec 03
+" Last Change: 2021 Jan 05
 set background=dark
 
 hi clear
@@ -276,19 +276,15 @@ hi! link htmlTag         Keyword
 hi! link htmlTagN        htmlTag
 hi! link htmlEndTag      htmlTag
 
-" vimtex
-call s:hi('texCmd', s:leaf3)
-call s:hi('texArg', s:petal2)
-call s:hi('texOpt', s:fur1)
-
 " sectioning etc.
 call s:hi('texCmdParts',     s:fur3)
 call s:hi('texPartArgTitle', s:petal2)
-call s:hi('texCmdTitle',     s:fur3)
-call s:hi('texCmdAuthor',    s:fur3)
+call s:hi('texTitle',     s:fur3, '', 'bold')
+call s:hi('texAuthor',    s:fur3, '', 'bold')
 call s:hi('texTitleArg',     s:petal2, '', 'bold')
 call s:hi('texAuthorArg',    s:petal2, '', 'italic')
 call s:hi('texFootnoteArg',  s:trunk4,   '', 'italic')
+call s:hi('texBeginEnd', s:fur3, '', 'italic')
 
 " environments
 call s:hi('texCmdEnv',     s:leaf3)
@@ -296,14 +292,8 @@ call s:hi('texEnvArgName', s:fur3)
 call s:hi('texEnvOpt',     s:petal2)
 
 " math
-call s:hi('texMathRegion',      s:leaf2)
-call s:hi('texMathCmd',         s:fur1)
-call s:hi('texMathDelim',       s:fur1)
-call s:hi('texMathDelimRegion', s:leaf3)
-call s:hi('texMathCmdEnv',      s:leaf3)
-call s:hi('texMathEnvArgName',  s:leaf3)
-hi! link texCmdMathText texCmdMathEnv
-hi! link texCmdMathEnv  texMathCmdEnv
+call s:hi('texMathZoneX', s:leaf2)
+call s:hi('texMathMatcher', s:leaf2)
 
 " references
 call s:hi('texCmdRef', s:leaf3)
@@ -315,7 +305,7 @@ hi! link texHrefArgLink texUrlArg
 hi! link texHrefArgText texOpt
 
 " symbols
-call s:hi('texSymbol',      s:leaf1)
+call s:hi('texSymbol',      s:leaf2)
 call s:hi('texSpecialChar', s:leaf3)
 hi! link texDelim       texSymbol
 hi! link texTabularChar texSymbol
