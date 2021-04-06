@@ -1,4 +1,8 @@
-" Last Change: 2021 Jan 27
+" Last Change: 2021 Apr 06
+
+if !exists("g:colors_name") || g:colors_name !=? "oak"
+  finish
+endif
 
 " sectioning etc.
 call oak#hi('texCmdParts',     g:oak#palette.fur3)

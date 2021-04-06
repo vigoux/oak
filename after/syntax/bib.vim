@@ -1,4 +1,8 @@
-" Last Change: 2021 Jan 27
+" Last Change: 2021 Apr 06
+
+if !exists("g:colors_name") || g:colors_name !=? "oak"
+  finish
+endif
 
 call oak#hi('bibType',     g:oak#palette.fur3)
 call oak#hi('bibKey',      g:oak#palette.fur2)

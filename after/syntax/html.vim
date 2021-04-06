@@ -1,4 +1,8 @@
-" Last Change: 2021 Jan 27
+" Last Change: 2021 Apr 06
+
+if !exists("g:colors_name") || g:colors_name !=? "oak"
+  finish
+endif
 
 call oak#hi('htmlArg',  g:oak#palette.leaf2)
 call oak#hi('htmlLink', g:oak#palette.fur4, '', 'underline')

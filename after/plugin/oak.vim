@@ -1,4 +1,8 @@
-" Last Change: 2021 Jan 27
+" Last Change: 2021 Apr 06
+
+if !exists("g:colors_name") || !exists("g:colors_name") || g:colors_name !=? "oak"
+  finish
+endif
 
 " Telescope
 call oak#hi('TelescopeNormal', g:oak#palette.trunk5, g:oak#palette.trunk1)

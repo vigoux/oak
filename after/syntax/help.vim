@@ -1,4 +1,8 @@
-" Last Change: 2021 Jan 27
+" Last Change: 2021 Apr 06
+
+if !exists("g:colors_name") || g:colors_name !=? "oak"
+  finish
+endif
 
 call oak#hi('helpCommand',        g:oak#palette.fur1)
 call oak#hi('helpExample',        g:oak#palette.fur4)
