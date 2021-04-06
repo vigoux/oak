@@ -6,7 +6,7 @@ Hey there, this is `oak` a brown-ish, high-contrast-ish colorscheme I made for m
 
 It is pretty early stage, and I might both not use it in the end, or drastically change it.
 
-#### LSP virtual text background
+## LSP virtual text background
 Set `g:oak_virtualtext_bg` to `1` before loading the colorscheme to have a prominent background for warning and error messages
 
 # Inspiration and goals
@@ -17,7 +17,7 @@ actually what I was aiming for.
 But, after digging a bit for themes, I found that brown themes are actually pretty nice too and
 wanted to try them out. But non of them was as high contrast as I liked, thus `oak`.
 
-On of the goals will be to have that compatible with both tree-sitter and nvim lsp implementation.
+One of the goals will be to have that compatible with both tree-sitter and nvim lsp implementation.
 
 # Acknowledgement
 
