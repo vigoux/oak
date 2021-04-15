@@ -1,4 +1,4 @@
-" Last Change: 2021 Jan 27
+" Last Change: 2021 Apr 15
 set background=dark
 
 hi clear
@@ -120,7 +120,7 @@ call oak#hi('StorageClass',   g:oak#palette.leaf3)
 call oak#hi('String',         g:oak#palette.leaf2)
 call oak#hi('Structure',      g:oak#palette.leaf3)
 call oak#hi('Tag',            g:oak#palette.trunk4)
-call oak#hi('Todo',           g:oak#palette.trunk2,  g:oak#palette.fur3)
+call oak#hi('Todo',           g:oak#palette.fur3)
 call oak#hi('Type',           g:oak#palette.leaf3,  '',        'italic')
 call oak#hi('Typedef',        g:oak#palette.leaf3)
 
