@@ -1,4 +1,4 @@
-" Last Change: 2021 Apr 22
+" Last Change: 2021 Sep 24
 set background=dark
 
 hi clear
@@ -131,17 +131,33 @@ call oak#hi('DiffDelete', g:oak#palette.petal1)
 hi! link diffAdded DiffAdd
 hi! link diffRemoved DiffDelete
 
-call oak#hi('LspDiagnosticsDefaultError',       g:oak#palette.petal1)
-call oak#hi('LspDiagnosticsDefaultWarning',     g:oak#palette.petal2)
-call oak#hi('LspDiagnosticsDefaultInformation', g:oak#palette.leaf2)
-call oak#hi('LspDiagnosticsDefaultHint',        g:oak#palette.fur4)
-call oak#hi('LspDiagnosticsUnderlineError',       g:oak#palette.petal1, '', 'underline')
-call oak#hi('LspDiagnosticsUnderlineWarning',     g:oak#palette.petal2, '', 'underline')
-call oak#hi('LspDiagnosticsUnderlineInformation', g:oak#palette.leaf2, '', 'underline')
-call oak#hi('LspDiagnosticsUnderlineHint',        g:oak#palette.fur4, '', 'underline')
-if get(g:, "oak_virtualtext_bg", 0) == 1
-  call oak#hi('LspDiagnosticsVirtualTextError',       g:oak#palette.petal1, g:oak#palette.trunk2)
-  call oak#hi('LspDiagnosticsVirtualTextWarning',     g:oak#palette.petal2, g:oak#palette.trunk2)
-  call oak#hi('LspDiagnosticsVirtualTextInformation', g:oak#palette.leaf2)
-  call oak#hi('LspDiagnosticsVirtualTextHint',        g:oak#palette.fur4)
+" The diagnostic api changed in version 0.6, and highlights changed too
+if has('nvim-0.6')
+  call oak#hi('DiagnosticError',       g:oak#palette.petal1)
+  call oak#hi('DiagnosticWarn',     g:oak#palette.petal2)
+  call oak#hi('DiagnosticInfo', g:oak#palette.leaf2)
+  call oak#hi('DiagnosticHint',        g:oak#palette.fur4)
+  call oak#hi('DiagnosticUnderlineError',       g:oak#palette.petal1, '', 'underline')
+  call oak#hi('DiagnosticUnderlineWarning',     g:oak#palette.petal2, '', 'underline')
+  call oak#hi('DiagnosticUnderlineInformation', g:oak#palette.leaf2, '', 'underline')
+  call oak#hi('DiagnosticUnderlineHint',        g:oak#palette.fur4, '', 'underline')
+else
+  call oak#hi('LspDiagnosticsDefaultError',       g:oak#palette.petal1)
+  call oak#hi('LspDiagnosticsDefaultWarning',     g:oak#palette.petal2)
+  call oak#hi('LspDiagnosticsDefaultInformation', g:oak#palette.leaf2)
+  call oak#hi('LspDiagnosticsDefaultHint',        g:oak#palette.fur4)
+  call oak#hi('LspDiagnosticsUnderlineError',       g:oak#palette.petal1, '', 'underline')
+  call oak#hi('LspDiagnosticsUnderlineWarning',     g:oak#palette.petal2, '', 'underline')
+  call oak#hi('LspDiagnosticsUnderlineInformation', g:oak#palette.leaf2, '', 'underline')
+  call oak#hi('LspDiagnosticsUnderlineHint',        g:oak#palette.fur4, '', 'underline')
+  if get(g:, "oak_virtualtext_bg", 0) == 1
+    call oak#hi('LspDiagnosticsVirtualTextError',       g:oak#palette.petal1, g:oak#palette.trunk2)
+    call oak#hi('LspDiagnosticsVirtualTextWarning',     g:oak#palette.petal2, g:oak#palette.trunk2)
+    call oak#hi('LspDiagnosticsVirtualTextInformation', g:oak#palette.leaf2)
+    call oak#hi('LspDiagnosticsVirtualTextHint',        g:oak#palette.fur4)
+  endif
 endif
+
+call oak#hi('LspReferenceText', g:oak#palette.fur4, '', 'underline')
+hi! link LspReferenceRead LspReferenceText
+hi! link LspReferenceWrite LspReferenceText
