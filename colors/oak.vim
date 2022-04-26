@@ -89,7 +89,8 @@ call oak#hi('healthSuccess', g:oak#palette.leaf3)
 call oak#hi('healthWarning', g:oak#palette.petal2)
 
 " Floating windows
-call oak#hi('NormalFloat', g:oak#palette.trunk5, g:oak#palette.trunk2)
+highlight! default link NormalFloat Normal
+highlight! default link FloatBorder Normal
 
 " language builtin
 call oak#hi('Boolean',        g:oak#palette.petal2,  '',        'bold')
