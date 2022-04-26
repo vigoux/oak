@@ -1,4 +1,4 @@
-" Last Change: 2021 Sep 24
+" Last Change: 2022 Apr 26
 set background=dark
 
 hi clear
@@ -61,7 +61,7 @@ call oak#hi('CursorLine',   '',       g:oak#palette.trunk2)
 call oak#hi('CursorLineNr', g:oak#palette.trunk4,  g:oak#palette.trunk2)
 call oak#hi('ColorColumn',  '',       g:oak#palette.trunk2)
 call oak#hi('LineNr',       g:oak#palette.trunk3)
-highlight link FoldColumn LineNr
+highlight! default link FoldColumn LineNr
 call oak#hi('SignColumn',   g:oak#palette.trunk2, g:oak#palette.trunk1)
 call oak#hi('StatusLine',   g:oak#palette.trunk4, g:oak#palette.trunk2, 'bold')
 call oak#hi('StatusLineNC', g:oak#palette.trunk3, g:oak#palette.trunk2)
