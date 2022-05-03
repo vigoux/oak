@@ -7,6 +7,6 @@ if exists('g:oak_statusline')
       autocmd WinLeave * setlocal statusline=%!oak#StatusLineInactive()
   augroup END
 
-  " Pour avoir un bon defaut
+  " Set up a sane default
   set statusline=%!oak#StatusLineActive()
 endif
