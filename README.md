@@ -9,6 +9,19 @@ It is pretty early stage, and I might both not use it in the end, or drastically
 ## LSP virtual text background
 Set `g:oak_virtualtext_bg` to `1` before loading the colorscheme to have a prominent background for warning and error messages
 
+## Oak statusline
+
+`oak` can provide a default statusline (similar to the one in the
+image) if you specify `g:oak_statusline` in your config file _before
+loading `oak`_.
+
+This statusline is different for active and inactive windows.
+
+This statusline has
+[`gitsigns.nvim`](https://github.com/lewis6991/gitsigns.nvim)
+integration by default, but should not error if the plugin is not
+installed.
+
 # Inspiration and goals
 
 I was a heavy dracula user before making this theme, so the high-contrast feel of dracula was

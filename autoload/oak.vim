@@ -1,4 +1,4 @@
-" Last Change: 2021 Jan 27
+" Last Change: 2022 May 03
 
 let g:oak#palette = {}
 let g:oak#palette.trunk1  = '#0E0701'
@@ -35,3 +35,21 @@ function! oak#hi(group, fg, ...) " bg, attrs
   execute join(l:hl_string, ' ')
 endfunction
 
+" Last Change: 2021 Sep 08
+
+function! oak#StatusLineActive()
+    let l:status = "%-6.{mode(6)}\ "
+    let l:status .= "%<%.50f%m\ "
+    let l:status .= "%y%q%w"
+    let l:status .= "%="
+    let l:status .= "%-20.(%8.{get(b:,'gitsigns_head','')}%12.{get(b:,'gitsigns_status','')}%)\ "
+    let l:status .= "%16.(%10.(%l/%LL%),\ %-5.(%c%V%)%)"
+    let l:status .= "\ %10.P"
+
+    return l:status
+endfunction
+
+
+function! oak#StatusLineInactive()
+    return "\ \ \ \ \ \ \ %<%.50f%m\ %y%q%w"
+endfunction
