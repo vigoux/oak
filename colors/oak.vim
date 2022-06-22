@@ -1,4 +1,4 @@
-" Last Change: 2022 Jun 20
+" Last Change: 2022 Jun 22
 set background=dark
 
 hi clear
@@ -138,10 +138,12 @@ if has('nvim-0.6')
   call oak#hi('DiagnosticWarn',     g:oak#palette.petal2)
   call oak#hi('DiagnosticInfo', g:oak#palette.leaf2)
   call oak#hi('DiagnosticHint',        g:oak#palette.fur4)
-  call oak#hi('DiagnosticUnderlineError',       g:oak#palette.petal1, '', 'underline')
-  call oak#hi('DiagnosticUnderlineWarning',     g:oak#palette.petal2, '', 'underline')
-  call oak#hi('DiagnosticUnderlineInformation', g:oak#palette.leaf2, '', 'underline')
-  call oak#hi('DiagnosticUnderlineHint',        g:oak#palette.fur4, '', 'underline')
+  if get(g:, "oak_virtualtext_bg", 0) == 1
+    call oak#hi('DiagnosticVirtualTextError',       g:oak#palette.petal1, g:oak#palette.trunk2)
+    call oak#hi('DiagnosticVirtualTextWarning',     g:oak#palette.petal2, g:oak#palette.trunk2)
+    call oak#hi('DiagnosticVirtualTextInformation', g:oak#palette.leaf2)
+    call oak#hi('DiagnosticVirtualTextHint',        g:oak#palette.fur4)
+  endif
 else
   call oak#hi('LspDiagnosticsDefaultError',       g:oak#palette.petal1)
   call oak#hi('LspDiagnosticsDefaultWarning',     g:oak#palette.petal2)
