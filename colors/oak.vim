@@ -1,4 +1,4 @@
-" Last Change: 2022 Apr 26
+" Last Change: 2022 Jun 20
 set background=dark
 
 hi clear
@@ -158,6 +158,13 @@ else
     call oak#hi('LspDiagnosticsVirtualTextHint',        g:oak#palette.fur4)
   endif
 endif
+
+hi! link ArchitextSearch1 Search
+call oak#hi('ArchitextSearch2', g:oak#palette.trunk1, g:oak#palette.leaf1)
+call oak#hi('ArchitextSearch3', g:oak#palette.trunk1, g:oak#palette.leaf2)
+call oak#hi('ArchitextSearch4', g:oak#palette.trunk1, g:oak#palette.petal1)
+call oak#hi('ArchitextSearch5', g:oak#palette.trunk1, g:oak#palette.petal2)
+call oak#hi('ArchitextSearch6', g:oak#palette.trunk1, g:oak#palette.trunk4)
 
 call oak#hi('LspReferenceText', g:oak#palette.fur4, '', 'underline')
 hi! link LspReferenceRead LspReferenceText
