@@ -1,4 +1,4 @@
-" Last Change: 2022 Jun 22
+" Last Change: 2022 Jul 25
 set background=dark
 
 hi clear
@@ -67,7 +67,7 @@ call oak#hi('StatusLine',   g:oak#palette.trunk4, g:oak#palette.trunk2, 'bold')
 call oak#hi('StatusLineNC', g:oak#palette.trunk3, g:oak#palette.trunk2)
 call oak#hi('Folded',       g:oak#palette.trunk5, g:oak#palette.trunk2)
 
-call oak#hi('VertSplit',    g:oak#palette.trunk3, g:oak#palette.trunk2)
+call oak#hi('VertSplit',    g:oak#palette.trunk3, g:oak#palette.trunk1)
 
 call oak#hi('Pmenu',      g:oak#palette.trunk4, g:oak#palette.trunk2)
 call oak#hi('PmenuSel',   g:oak#palette.trunk5, g:oak#palette.trunk3)
