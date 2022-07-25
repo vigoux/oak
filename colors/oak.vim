@@ -65,6 +65,8 @@ highlight! default link FoldColumn LineNr
 call oak#hi('SignColumn',   g:oak#palette.trunk2, g:oak#palette.trunk1)
 call oak#hi('StatusLine',   g:oak#palette.trunk4, g:oak#palette.trunk2, 'bold')
 call oak#hi('StatusLineNC', g:oak#palette.trunk3, g:oak#palette.trunk2)
+call oak#hi('WinBar',   g:oak#palette.trunk5, g:oak#palette.trunk1, 'bold')
+call oak#hi('WinBarNC', g:oak#palette.trunk5, g:oak#palette.trunk1)
 call oak#hi('Folded',       g:oak#palette.trunk5, g:oak#palette.trunk2)
 
 call oak#hi('VertSplit',    g:oak#palette.trunk3, g:oak#palette.trunk1)
