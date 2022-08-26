@@ -1,4 +1,4 @@
-" Last Change: 2022 Jul 25
+" Last Change: 2022 Aug 26
 set background=dark
 
 hi clear
@@ -173,3 +173,5 @@ call oak#hi('ArchitextSearch6', g:oak#palette.trunk1, g:oak#palette.trunk4)
 call oak#hi('LspReferenceText', g:oak#palette.fur4, '', 'underline')
 hi! link LspReferenceRead LspReferenceText
 hi! link LspReferenceWrite LspReferenceText
+highlight! link LspCodeLens Comment
+highlight! link LspCodeLensSeparator Comment
