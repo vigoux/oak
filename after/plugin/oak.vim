@@ -1,4 +1,4 @@
-" Last Change: 2021 Apr 06
+" Last Change: 2022 Aug 31
 
 if !exists("g:colors_name") || !exists("g:colors_name") || g:colors_name !=? "oak"
   finish
@@ -15,4 +15,8 @@ call oak#hi('TelescopeBorder', g:oak#palette.trunk4)
 " Tree-sitter internals and uses
 call oak#hi("nodeType", g:oak#palette.trunk5)
 call oak#hi("nodeTag", g:oak#palette.fur1)
-call oak#hi('TSParameter', g:oak#palette.trunk5, '', 'italic')
+if has('nvim-0.8')
+  call oak#hi('@parameter', g:oak#palette.trunk5, '', 'italic')
+else
+  call oak#hi('TSParameter', g:oak#palette.trunk5, '', 'italic')
+endif
