@@ -35,8 +35,6 @@ function! oak#hi(group, fg, ...) " bg, attrs
   execute join(l:hl_string, ' ')
 endfunction
 
-" Last Change: 2021 Sep 08
-
 function! oak#StatusLineActive()
     let l:status = "%<%.50f%m\ "
     let l:status .= "%y%q%w"
