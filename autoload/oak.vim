@@ -1,4 +1,4 @@
-" Last Change: 2022 May 03
+" Last Change: 2022 Sep 27
 
 let g:oak#palette = {}
 let g:oak#palette.trunk1  = '#0E0701'
@@ -38,8 +38,7 @@ endfunction
 " Last Change: 2021 Sep 08
 
 function! oak#StatusLineActive()
-    let l:status = "%-6.{mode(6)}\ "
-    let l:status .= "%<%.50f%m\ "
+    let l:status = "%<%.50f%m\ "
     let l:status .= "%y%q%w"
     let l:status .= "%="
     let l:status .= "%-20.(%8.{get(b:,'gitsigns_head','')}%12.{get(b:,'gitsigns_status','')}%)\ "
@@ -49,7 +48,6 @@ function! oak#StatusLineActive()
     return l:status
 endfunction
 
-
 function! oak#StatusLineInactive()
-    return "\ \ \ \ \ \ \ %<%.50f%m\ %y%q%w"
+    return "%<%.50f%m\ %y%q%w"
 endfunction
