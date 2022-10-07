@@ -1,4 +1,4 @@
-" Last Change: 2022 Sep 27
+" Last Change: 2022 Oct 07
 
 let g:oak#palette = {}
 let g:oak#palette.trunk1  = '#0E0701'
@@ -20,16 +20,18 @@ function! s:orNONE(str)
   return len(a:str) > 0 ? a:str : 'NONE'
 endfunction
 
-function! oak#hi(group, fg, ...) " bg, attrs
+function! oak#hi(group, fg, ...) " bg, attrs, sp
   let l:fg = s:orNONE(a:fg)
   let l:bg = s:orNONE(get(a:, 1, ''))
   let l:attrs = s:orNONE(get(a:, 2, ''))
+  let l:sp = s:orNONE(get(a:, 3, ''))
 
   let l:hl_string = [
         \ 'highlight', a:group,
         \ 'guifg=' . l:fg,
         \ 'guibg=' . l:bg,
         \ 'gui=' . l:attrs,
+        \ 'guisp=' . l:sp,
         \]
 
   execute join(l:hl_string, ' ')

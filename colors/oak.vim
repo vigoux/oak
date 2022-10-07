@@ -1,4 +1,4 @@
-" Last Change: 2022 Aug 26
+" Last Change: 2022 Oct 07
 set background=dark
 
 hi clear
@@ -81,10 +81,10 @@ call oak#hi('TabLineSel', g:oak#palette.trunk5)
 call oak#hi('TabLine', g:oak#palette.trunk5, g:oak#palette.trunk2)
 call oak#hi('TabLineFill', g:oak#palette.trunk5, g:oak#palette.trunk2)
 
-call oak#hi('SpellBad',   g:oak#palette.petal1, '', 'undercurl')
-call oak#hi('SpellCap',   g:oak#palette.leaf2, '', 'undercurl')
-call oak#hi('SpellLocal', g:oak#palette.trunk4,   '', 'undercurl')
-call oak#hi('SpellRare',  g:oak#palette.trunk5,   '', 'undercurl')
+call oak#hi('SpellBad',   '', '', 'undercurl', g:oak#palette.petal1)
+call oak#hi('SpellCap',   '', '', 'undercurl', g:oak#palette.leaf2)
+call oak#hi('SpellLocal', '',   '', 'undercurl', g:oak#palette.trunk4)
+call oak#hi('SpellRare',  '',   '', 'undercurl', g:oak#palette.trunk5)
 
 call oak#hi('healthError',   g:oak#palette.petal1)
 call oak#hi('healthSuccess', g:oak#palette.leaf3)
