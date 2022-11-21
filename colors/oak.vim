@@ -1,4 +1,4 @@
-" Last Change: 2022 Oct 07
+" Last Change: 2022 Nov 21
 set background=dark
 
 hi clear
@@ -106,7 +106,7 @@ call oak#hi('Error',          g:oak#palette.petal1, g:oak#palette.trunk1)
 call oak#hi('Exception',      g:oak#palette.leaf3)
 call oak#hi('Float',          g:oak#palette.petal2)
 call oak#hi('Function',       g:oak#palette.fur3)
-call oak#hi('Identifier',     g:oak#palette.fur2)
+call oak#hi('Identifier',     g:oak#palette.trunk5)
 call oak#hi('Include',        g:oak#palette.leaf1)
 call oak#hi('Keyword',        g:oak#palette.leaf1)
 call oak#hi('Label',          g:oak#palette.leaf2)

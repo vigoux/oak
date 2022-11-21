@@ -1,6 +1,6 @@
-" Last Change: 2022 Aug 31
+" Last Change: 2022 Nov 21
 
-if !exists("g:colors_name") || !exists("g:colors_name") || g:colors_name !=? "oak"
+if !exists("g:colors_name") || g:colors_name !=? "oak"
   finish
 endif
 
@@ -17,6 +17,19 @@ call oak#hi("nodeType", g:oak#palette.trunk5)
 call oak#hi("nodeTag", g:oak#palette.fur1)
 if has('nvim-0.8')
   call oak#hi('@parameter', g:oak#palette.trunk5, '', 'italic')
+
+  highlight default link @text.environment Keyword
+
+  call oak#hi('@property', g:oak#palette.fur2)
+
+  call oak#hi('@namespace', g:oak#palette.fur2)
+  highlight default link @text.environment.name @namespace
+
+  call oak#hi('@punctuation.delimiter', g:oak#palette.fur2)
+  highlight default link @punctuation.special @punctuation.delimiter
+  highlight default link @text.math @punctuation.delimiter
+
+  highlight default link @text.reference Constant
 else
   call oak#hi('TSParameter', g:oak#palette.trunk5, '', 'italic')
 endif
