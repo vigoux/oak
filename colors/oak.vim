@@ -1,4 +1,4 @@
-" Last Change: 2022 Nov 21
+" Last Change: 2022 Nov 22
 set background=dark
 
 hi clear
@@ -24,14 +24,14 @@ let g:terminal_color_11 = g:oak#palette.petal2
 let g:terminal_color_12 = g:oak#palette.leaf3
 let g:terminal_color_13 = g:oak#palette.leaf1
 let g:terminal_color_14 = g:oak#palette.leaf2
-let g:terminal_color_15 = g:oak#palette.trunk5
+let g:terminal_color_15 = g:oak#palette.fg
 
-call oak#hi('Bold',       g:oak#palette.trunk4,  '',     'bold')
-call oak#hi('Italic',     g:oak#palette.trunk4,  '',     'italic')
-call oak#hi('Underlined', g:oak#palette.fur4, '',     'underline')
+call oak#hi('Bold',       g:oak#palette.fg,  '',     'bold')
+call oak#hi('Italic',     g:oak#palette.fg,  '',     'italic')
+call oak#hi('Underlined', g:oak#palette.fg, '',     'underline')
 
 " nvim
-call oak#hi('Normal',     g:oak#palette.trunk5,  g:oak#palette.trunk1)
+call oak#hi('Normal',     g:oak#palette.fg,  g:oak#palette.bg)
 call oak#hi('Visual',     '',       g:oak#palette.trunk2)
 call oak#hi('VisualNOS',  '',       g:oak#palette.trunk2)
 call oak#hi('Search',     g:oak#palette.trunk2, g:oak#palette.fur3)
@@ -65,26 +65,26 @@ highlight! default link FoldColumn LineNr
 call oak#hi('SignColumn',   g:oak#palette.trunk2, g:oak#palette.trunk1)
 call oak#hi('StatusLine',   g:oak#palette.trunk4, g:oak#palette.trunk2, 'bold')
 call oak#hi('StatusLineNC', g:oak#palette.trunk3, g:oak#palette.trunk2)
-call oak#hi('WinBar',   g:oak#palette.trunk5, g:oak#palette.trunk1, 'bold')
-call oak#hi('WinBarNC', g:oak#palette.trunk5, g:oak#palette.trunk1)
-call oak#hi('Folded',       g:oak#palette.trunk5, g:oak#palette.trunk2)
+call oak#hi('WinBar',   g:oak#palette.fg, g:oak#palette.trunk1, 'bold')
+call oak#hi('WinBarNC', g:oak#palette.fg, g:oak#palette.trunk1)
+call oak#hi('Folded',       g:oak#palette.fg, g:oak#palette.trunk2)
 
 call oak#hi('VertSplit',    g:oak#palette.trunk3, g:oak#palette.trunk1)
 
 call oak#hi('Pmenu',      g:oak#palette.trunk4, g:oak#palette.trunk2)
-call oak#hi('PmenuSel',   g:oak#palette.trunk5, g:oak#palette.trunk3)
+call oak#hi('PmenuSel',   g:oak#palette.fg, g:oak#palette.trunk3)
 call oak#hi('PmenuSbar',  '',  g:oak#palette.trunk3)
 call oak#hi('PmenuThumb', '',  g:oak#palette.trunk2)
 hi! link Wildmenu Pmenu
 
-call oak#hi('TabLineSel', g:oak#palette.trunk5)
-call oak#hi('TabLine', g:oak#palette.trunk5, g:oak#palette.trunk2)
-call oak#hi('TabLineFill', g:oak#palette.trunk5, g:oak#palette.trunk2)
+highlight default link TabLineSel Normal
+call oak#hi('TabLine', g:oak#palette.fg, g:oak#palette.trunk2)
+call oak#hi('TabLineFill', g:oak#palette.fg, g:oak#palette.trunk2)
 
 call oak#hi('SpellBad',   '', '', 'undercurl', g:oak#palette.petal1)
 call oak#hi('SpellCap',   '', '', 'undercurl', g:oak#palette.leaf2)
 call oak#hi('SpellLocal', '',   '', 'undercurl', g:oak#palette.trunk4)
-call oak#hi('SpellRare',  '',   '', 'undercurl', g:oak#palette.trunk5)
+call oak#hi('SpellRare',  '',   '', 'undercurl', g:oak#palette.fg)
 
 call oak#hi('healthError',   g:oak#palette.petal1)
 call oak#hi('healthSuccess', g:oak#palette.leaf3)
@@ -101,12 +101,12 @@ call oak#hi('Comment',        g:oak#palette.fur1,  '',        'italic')
 call oak#hi('Conditional',    g:oak#palette.leaf1)
 call oak#hi('Constant',       g:oak#palette.petal2)
 call oak#hi('Define',         g:oak#palette.leaf1)
-call oak#hi('Delimiter',      g:oak#palette.trunk5)
 call oak#hi('Error',          g:oak#palette.petal1, g:oak#palette.trunk1)
 call oak#hi('Exception',      g:oak#palette.leaf3)
 call oak#hi('Float',          g:oak#palette.petal2)
 call oak#hi('Function',       g:oak#palette.fur3)
-call oak#hi('Identifier',     g:oak#palette.trunk5)
+highlight default link Delimiter Normal
+highlight default link Identifier Normal
 call oak#hi('Include',        g:oak#palette.leaf1)
 call oak#hi('Keyword',        g:oak#palette.leaf1)
 call oak#hi('Label',          g:oak#palette.leaf2)

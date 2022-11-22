@@ -1,4 +1,4 @@
-" Last Change: 2022 Oct 07
+" Last Change: 2022 Nov 22
 
 let g:oak#palette = {}
 let g:oak#palette.trunk1  = '#0E0701'
@@ -15,6 +15,13 @@ let g:oak#palette.leaf2   = '#2DC7D2'
 let g:oak#palette.leaf3   = '#42BD7D'
 let g:oak#palette.petal1  = '#FF4D4D'
 let g:oak#palette.petal2  = '#F0C54C'
+
+let g:oak#palette.fg = g:oak#palette.trunk5
+let g:oak#palette.bg = g:oak#palette.trunk1
+let g:oak#palette.blue = g:oak#palette.leaf2
+let g:oak#palette.green = g:oak#palette.leaf3
+let g:oak#palette.red = g:oak#palette.petal1
+let g:oak#palette.yellow = g:oak#palette.petal2
 
 function! s:orNONE(str)
   return len(a:str) > 0 ? a:str : 'NONE'

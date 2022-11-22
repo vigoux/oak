@@ -1,4 +1,4 @@
-" Last Change: 2022 Nov 21
+" Last Change: 2022 Nov 22
 
 if !exists("g:colors_name") || g:colors_name !=? "oak"
   finish
@@ -16,7 +16,7 @@ call oak#hi('TelescopeBorder', g:oak#palette.trunk4)
 call oak#hi("nodeType", g:oak#palette.trunk5)
 call oak#hi("nodeTag", g:oak#palette.fur1)
 if has('nvim-0.8')
-  call oak#hi('@parameter', g:oak#palette.trunk5, '', 'italic')
+  call oak#hi('@parameter', g:oak#palette.fg, '', 'italic')
 
   highlight default link @text.environment Keyword
 
@@ -30,6 +30,10 @@ if has('nvim-0.8')
   highlight default link @text.math @punctuation.delimiter
 
   highlight default link @text.reference Constant
+
+  highlight default link @text.emphasis Italic
+  highlight default link @text.strong Bold
+  highlight default link @text.underline Underlined
 else
-  call oak#hi('TSParameter', g:oak#palette.trunk5, '', 'italic')
+  call oak#hi('TSParameter', g:oak#palette.fg, '', 'italic')
 endif
